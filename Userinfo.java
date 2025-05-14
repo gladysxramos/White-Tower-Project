@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 
 public class Userinfo {
-    private static String[][] foodSpots = new String[4][2];
+    // edit this jared
+    private static String[][] foodSpots = new String[4][4];
     private static String[] busRoutes = new String[4];
     private String username;
     private String password;
-    private ArrayList<String> favSpots = new ArrayList<>();
+    private ArrayList<String> ratings = new ArrayList<>();
 
 
     public Userinfo(String username, String password){
@@ -20,6 +21,8 @@ public class Userinfo {
     public String getPassword() {
         return password;
     }
+
+
 
     
 
