@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Userinfo {
     // edit this jared
-    private static String[][] foodSpots = new String[4][4];
+    private  ArrayList<FoodSpots> foodSpots = new ArrayList<>();
     private static String[] busRoutes = new String[4];
     private String username;
     private String password;
@@ -23,7 +23,11 @@ public class Userinfo {
     }
 
 
-
+    public void populateLists(){
+        foodSpots.add(new FoodSpots("In N Out", 1.4));
+        foodSpots.add(new FoodSpots("Canes", 1.8));
+        foodSpots.add(new FoodSpots("Cafe 86", 3.1));
+    }
     
 
 

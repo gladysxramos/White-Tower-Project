@@ -112,7 +112,6 @@ public class Main{
                 Userinfo newUser = signup(users);
                 users.add(newUser);
             }
-
             
         }
         
