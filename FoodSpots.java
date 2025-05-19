@@ -20,7 +20,7 @@ public class FoodSpots {
 class Cuisine extends FoodSpots{
     private String typeOfFood;
 
-    public Cuisine(String restaurant, double distance, String typeOfFood){
+    public Cuisine(String restaurant, double distance){
         super(restaurant, distance);
         this.typeOfFood = typeOfFood;
     }
