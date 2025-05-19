@@ -1,14 +1,14 @@
 public class FoodSpots {
-    private String resturant;
+    private String restaurant;
     private double distance;
     
-    public FoodSpots(String resturant, double distance){
-        this.resturant = resturant;
+    public FoodSpots(String restaurant, double distance){
+        this.restaurant = restaurant;
         this.distance = distance;
     }
 
     public String getRestaurant(){
-        return resturant;
+        return restaurant;
     }
 
     public double getDistance(){
