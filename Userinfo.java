@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 public class Userinfo {
-    // edit this jared
     private ArrayList<FoodSpots> foodSpots = new ArrayList<>();
-    private static ArrayList<BusRoutes> busRoutes = new ArrayList<>();
+    private ArrayList<BusRoutes> busRoutes = new ArrayList<>();
+    private Object[][] correspondingAreas = new Object[10][2];
     private String username;
     private String password;
     private ArrayList<String> ratings = new ArrayList<>();
@@ -24,6 +24,7 @@ public class Userinfo {
 
 
     public void populateLists(){
+        //Populate Food Spots
         foodSpots.add(new Cuisine("In N Out", 1.4));
         foodSpots.add(new Cuisine("Canes", 1.8));
         foodSpots.add(new Cuisine("Cafe 86", 3.1));
@@ -35,7 +36,7 @@ public class Userinfo {
         foodSpots.add(new Cuisine("Olive Garden", 8.9));
         foodSpots.add(new Cuisine("King Taco", 8.9));
 
-        
+        // Populate Bus Routes
         busRoutes.add(new BusRoutes("Torrance 13 to Artesia", 0.4));
         busRoutes.add(new BusRoutes("Long Beach Transit 2 to Sepuvelda", 0.4));
         busRoutes.add(new BusRoutes("LA Transit 246 to San Pedro", 0.8));
@@ -46,6 +47,12 @@ public class Userinfo {
         busRoutes.add(new BusRoutes("LA 246 to San Pedro", 0.8));
         busRoutes.add(new BusRoutes("Torrance 13 to Redondo Beach and LA 344 to Rancho Palos Verdes", 0.5));
         busRoutes.add(new BusRoutes("Torrance 6 to Artesia and LA 60 to Downtown LA", 0.6));
+
+        // Populate correspondingAreas array
+        for (int i = 0; i < foodSpots.size(); i++) {
+            correspondingAreas[i][0] = foodSpots.get(i);
+            correspondingAreas[i][1] = busRoutes.get(i);
+        }
     }
     
     public void addFoodSpot(FoodSpots spot) {
