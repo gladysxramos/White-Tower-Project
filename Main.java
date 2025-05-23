@@ -1,13 +1,13 @@
 /*=============================================================================
- |   Assignment:  Program #[n]:  [Assignment Title]
- |       Author:  [Your Name ]
- |      Partner:  [Partner's Name ]
+ |   Assignment:  White Tower Project
+ |       Author:  Gladys Ramos
+ |      Partner:  Jared Gonzalez
  |
- |  Course Name:  [Course Name]
- |   Instructor:  John Smith
- |     Due Date:  [Due Date and Time]
+ |  Course Name:  AP Computer Science Principles 
+ |   Instructor:  Jonathan Virak 
+ |     Due Date:  Friday, May 23, 2025 at 11:59 PM PST 
  |
- |  Description:  [Describe the program's goal, IN DETAIL.]
+ |  Description:  For our White Tower Project, we decided to tackle the issue of getting food for CAMS Students. 
  |
  |     Language:  [ Java version 8]
  |                
