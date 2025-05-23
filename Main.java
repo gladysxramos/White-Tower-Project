@@ -7,7 +7,7 @@
  |   Instructor:  Jonathan Virak 
  |     Due Date:  Friday, May 23, 2025 at 11:59 PM PST 
  |
- |  Description:  For our White Tower Project, we decided to tackle the issue of getting food for CAMS Students. 
+ |  Description:  For our White Tower Project, we decided to tackle the issue of getting food for CAMS Students. Currently, there are a variety of food spots in the Carson/South Bay area that CAMS students only have access to on car/mobile order. With this program, we open up the door for CAMS students to take public transport. When the program begins running, the user is prompted to either sign up to create an in-game account or log in with a pre-existing account. When an account is created, it is saved within the UserInfo class. That means that when the user tries to sign up with the same username, the program tells the user that that username is already taken. It also means that when the user inputs an incorrect password, the user is not allowed to login. In the case of a non-existing/saved username, the program also does not allow the user to enter. Once the user gains access, a pop-up menu of all the food options and their corresponding routes shows up. From there, the user is prompted to press a number from 1 - 9 that indicates which food option they would like more information of. From there, they can choose to view either more information about the food, the distance of the bus route, or to exit the menu. Overall, this simplifies the search for food in the local area with the aid of public transportation for CAMS students.  
  |
  |     Language:  [ Java version 8]
  |                
