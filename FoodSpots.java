@@ -21,8 +21,7 @@
  ||                  The Cuisine constructor takes a three parameters: the same as the FoodSpots with the new one being typeOfFood
  ||
  ||
- ||  Inst. Methods:  [List the names, arguments, and return types of all
- ||                   public instance methods.]
+ ||  Inst. Methods:  getter methods only
  ||
  ++-----------------------------------------------------------------------*/
 public class FoodSpots {

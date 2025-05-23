@@ -1,26 +1,23 @@
 /*+----------------------------------------------------------------------
  ||
- ||  Class [Class Name] 
+ ||  Class BusRoutes
  ||
- ||         Author:  [Your Name]
+ ||         Author:  Gladys Ramos, Jared Gonzales
  ||
- ||        Purpose:  [A description of why this class exists.  For what
- ||                   reason was it written?  Which jobs does it perform?]
+ ||        Purpose:  Create an object reference that holds the name of the bus route and how far it is from CAMS
  ||
  ||
  |+-----------------------------------------------------------------------
  ||
- ||      Constants:  [Name all public class constants, and provide a very
- ||                   brief (but useful!) description of each.]
+ ||      Constants: String busName: holds the bus route name
+ ||                 double disntance: holds how far the bus route is from CAMS
  ||
  |+-----------------------------------------------------------------------
  ||
- ||   Constructors:  [List the names and arguments of all defined
- ||                   constructors.]
+ ||   Constructors: BusRoutes constructor has two parameters: busName and distance
  ||
  ||
- ||  Inst. Methods:  [List the names, arguments, and return types of all
- ||                   public instance methods.]
+ ||  Inst. Methods:  getter methods only
  ||
  ++-----------------------------------------------------------------------*/
 public class BusRoutes {
