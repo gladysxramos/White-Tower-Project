@@ -18,13 +18,6 @@
  ||        password string: Used to create a string to populate the password the user chooses as well as create a 
  ||         get method to retrieve password info when needed such as when comparing user input of a password to a pre-existing passowrd.
  ||
- ||     
- ||      Constants:  username string: Used to create a string to populate
- ||      Constants:  username string: Used to create a string to populate
- ||      Constants:  username string: Used to create a string to populate
- ||      Constants:  username string: Used to create a string to populate
- ||      Constants:  username string: Used to create a string to populate
- ||
  |+-----------------------------------------------------------------------
  ||
  ||   Constructors:  
