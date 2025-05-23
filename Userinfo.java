@@ -1,26 +1,44 @@
 /*+----------------------------------------------------------------------
  ||
- ||  Class [Class Name] 
+ ||  Class UserInfo
  ||
- ||         Author:  [Your Name]
+ ||         Author:  Gladys Ramos & Jared Gonzalez 
  ||
- ||        Purpose:  [A description of why this class exists.  For what
- ||                   reason was it written?  Which jobs does it perform?]
- ||
- ||
- |+-----------------------------------------------------------------------
- ||
- ||      Constants:  [Name all public class constants, and provide a very
- ||                   brief (but useful!) description of each.]
+ ||        Purpose:   The purpose of the UserInfo class is to store user input such as 
+ ||                   their food options, login information, and more. This class also helps
+ ||                   populate the list of food options and return food spots once the user 
+ ||                   selects an option. 
  ||
  |+-----------------------------------------------------------------------
  ||
- ||   Constructors:  [List the names and arguments of all defined
- ||                   constructors.]
+ ||      Constants:  
+ ||      username string: Used to create a string to populate the username the user chooses as well as 
+ ||      create a get method to retrieve the username info when needed
+ ||
+ ||        password string: Used to create a string to populate the password the user chooses as well as create a 
+ ||         get method to retrieve password info when needed such as when comparing user input of a password to a pre-existing passowrd.
+ ||
+ ||     
+ ||      Constants:  username string: Used to create a string to populate
+ ||      Constants:  username string: Used to create a string to populate
+ ||      Constants:  username string: Used to create a string to populate
+ ||      Constants:  username string: Used to create a string to populate
+ ||      Constants:  username string: Used to create a string to populate
+ ||
+ |+-----------------------------------------------------------------------
+ ||
+ ||   Constructors:  
+ ||
+ ||     public class UserInfo: used to create Array Lists for food spots, bus routes, and corresponding areas. ||    public UserInfo: used to call the username and password constants as a single UserInfo data point to compare when a user is inputting login information
+ ||     public void populateLists: Populates the foodSpots and busRoutes array with corresponding data for each food location available in the program  ||    public void populateCorresponding: Used a for loop to get corresponding data points using the i variable across the two array lists to make smoother retrieval when a user chooses a food location
+ ||     public String toString: Formats the retrieval of the number, food spot, and bus route the user chooses and uses an enhanced for loop to iterate through the list with corresponding values 
  ||
  ||
- ||  Inst. Methods:  [List the names, arguments, and return types of all
- ||                   public instance methods.]
+ ||  Inst. Methods:  
+ ||  
+ ||    public String getUsername: returns string of username by using the method from UserInfo 
+ ||    public String getPassword: returns string username by using the method from UserInfo 
+ ||
  ||
  ++-----------------------------------------------------------------------*/
 import java.util.ArrayList;
