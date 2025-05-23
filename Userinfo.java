@@ -97,8 +97,9 @@ public class Userinfo {
         return correspondingAreas;
     }
 
-    
+
     @Override
+    // a to string method that prints the userinfo properly
     public String toString() {
         String result = String.format("%-5s | %-30s | %-50s\n", "No.", "Food Spots", "Bus Routes");
         result += String.format("%-5s-+-%-30s-+-%-50s\n", "-----", "------------------------------", "--------------------------------------------------");
