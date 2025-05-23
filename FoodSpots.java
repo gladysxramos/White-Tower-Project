@@ -1,25 +1,24 @@
 /*+----------------------------------------------------------------------
  ||
- ||  Class [Class Name] 
+ ||  Class: FoodSpots
  ||
- ||         Author:  [Your Name]
+ ||         Author:  Gladys Ramos, Jared Gonzales
  ||
- ||        Purpose:  [A description of why this class exists.  For what
- ||                   reason was it written?  Which jobs does it perform?]
+ ||        Purpose:  Create an instance object that holds information about the resturant
  ||
- ||  Inherits From:  [If this class is a subclass of another, name it.
- ||                   If not, just say "None."]
+ ||  Inherits From: Cuisine inherits FoodSpots and adds a new variable to the Foodspot which is the type of food that the resuturant serves
  ||
  ||
  |+-----------------------------------------------------------------------
  ||
- ||      Constants:  [Name all public class constants, and provide a very
- ||                   brief (but useful!) description of each.]
+ ||      Constants:  String resturances: holds the name of the resturant
+ ||                  double distance: holds a the distance in miles from CAMS
+ ||                  String typeOfFood: holds the type of Cuisine that the resturant sells
  ||
  |+-----------------------------------------------------------------------
  ||
- ||   Constructors:  [List the names and arguments of all defined
- ||                   constructors.]
+ ||   Constructors:  FoodSpots constructor takes two parameters: the resturant name and the distance from CAMS
+ ||                  The Cuisine constructor takes a three parameters: the same as the FoodSpots with the new one being typeOfFood
  ||
  ||
  ||  Inst. Methods:  [List the names, arguments, and return types of all
@@ -36,7 +35,7 @@ public class FoodSpots {
         this.distance = distance;
     }
 
-    // getter and setter methods
+    // getter methods
     public String getRestaurant(){
         return restaurant;
     }
