@@ -63,7 +63,7 @@ class Cuisine extends FoodSpots{
         this.typeOfFood = typeOfFood;
     }
 
-    // setter method
+    // getter method
     public String getTypeOfFood(){
         return typeOfFood;
     }

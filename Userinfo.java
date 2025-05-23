@@ -45,6 +45,8 @@ public class Userinfo {
         this.password = password;
     }
 
+    //getter methods
+
     public String getUsername() {
         return username;
     }
@@ -54,8 +56,9 @@ public class Userinfo {
     }
 
 
+    // populate individual lists
     public void populateLists(){
-        //Populate Food Spots
+       
         foodSpots.add(new Cuisine("In N Out", 1.4, "American"));
         foodSpots.add(new Cuisine("Canes", 1.8, "American"));
         foodSpots.add(new Cuisine("Cafe 86", 3.1, "Filipino"));
@@ -67,7 +70,7 @@ public class Userinfo {
         foodSpots.add(new Cuisine("Olive Garden", 8.9, "Italian"));
         foodSpots.add(new Cuisine("King Taco", 8.9, "Mexican"));
 
-        // Populate Bus Routes
+       
         busRoutes.add(new BusRoutes("Torrance 13 to Artesia", 0.4));
         busRoutes.add(new BusRoutes("Long Beach Transit 2 to Sepuvelda", 0.4));
         busRoutes.add(new BusRoutes("LA Transit 246 to San Pedro", 0.8));
@@ -79,9 +82,10 @@ public class Userinfo {
         busRoutes.add(new BusRoutes("Torrance 13 to Redondo Beach and LA 344 to Rancho Palos Verdes", 0.5));
         busRoutes.add(new BusRoutes("Torrance 6 to Artesia and LA 60 to Downtown LA", 0.6));
 
-        // Populate correspondingAreas array
+  
     }
 
+    // populate corresponding list
     public void populateCorresponding() {
         for (int i = 0; i < foodSpots.size(); i++) {
             ArrayList<Object> pair = new ArrayList<>();
@@ -91,7 +95,7 @@ public class Userinfo {
         }
     }
     
-   
+   // getter methods
     public ArrayList<FoodSpots> getFoodSpots() {
         return foodSpots;
     }
@@ -100,6 +104,7 @@ public class Userinfo {
         return correspondingAreas;
     }
 
+    
     @Override
     public String toString() {
         String result = String.format("%-5s | %-30s | %-50s\n", "No.", "Food Spots", "Bus Routes");

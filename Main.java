@@ -20,27 +20,26 @@ public class Main{
     
     // method that uses binary sort and recurssion to search for the users account, created using existing code from CSA JAVA course
     public static int searchList(ArrayList<Userinfo> userList, String targetUser, String targetPassword, int low, int high){
+        // sorts the list lexigraphically before continuing
+        userList.sort((a, b) -> a.getUsername().compareTo(b.getUsername()));
+        
         if (low > high){
             return -1;
         }
 
         int mid = (low + high) / 2;
         
-       
         if (userList.get(mid).getUsername().equals(targetUser)) {
-          
             if (userList.get(mid).getPassword().equals(targetPassword)) {
                 return mid; 
             }
             return -1; 
         }
         
-        // uses compareTo function to compare the strings numerically, checking the left half of the array
         if (userList.get(mid).getUsername().compareTo(targetUser) > 0) {
             return searchList(userList, targetUser, targetPassword, low, mid - 1);
         }
         
-       // uses compareTo function to compare the strings numerically, checking the right half of the array
         return searchList(userList, targetUser, targetPassword, mid + 1, high);
     }
 
@@ -121,11 +120,14 @@ public class Main{
         users.add(new Userinfo("nirja123", "helloMynameisNirja"));
         users.add(new Userinfo("sarah.hur", "ILOVEALDC"));
 
+        System.out.println("Welcome to this program!");
+        System.out.println("This program is designed to provide CAMS students with food spots in the area!");
+        System.out.println("Please choose to either log in or sign up");
         
         while (running){
             // have the user make initial selection using a try and except
             try {
-                System.out.println("Welcome to this program!");
+                
                 System.out.println("1. Log in");
                 System.out.println("2. Sign up");
                 userInput = sc.nextInt();
