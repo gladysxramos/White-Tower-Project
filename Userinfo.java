@@ -1,12 +1,43 @@
+/*+----------------------------------------------------------------------
+ ||
+ ||  Class [Class Name] 
+ ||
+ ||         Author:  [Your Name]
+ ||
+ ||        Purpose:  [A description of why this class exists.  For what
+ ||                   reason was it written?  Which jobs does it perform?]
+ ||
+ ||  Inherits From:  [If this class is a subclass of another, name it.
+ ||                   If not, just say "None."]
+ ||
+ ||     Interfaces:  [If any predefined interfaces are implemented by
+ ||                   this class, name them.  If not, ... well, you know.]
+ ||
+ |+-----------------------------------------------------------------------
+ ||
+ ||      Constants:  [Name all public class constants, and provide a very
+ ||                   brief (but useful!) description of each.]
+ ||
+ |+-----------------------------------------------------------------------
+ ||
+ ||   Constructors:  [List the names and arguments of all defined
+ ||                   constructors.]
+ ||
+ ||  Class Methods:  [List the names, arguments, and return types of all
+ ||                   public class methods.]
+ ||
+ ||  Inst. Methods:  [List the names, arguments, and return types of all
+ ||                   public instance methods.]
+ ||
+ ++-----------------------------------------------------------------------*/
 import java.util.ArrayList;
 
 public class Userinfo {
     private ArrayList<FoodSpots> foodSpots = new ArrayList<>();
     private ArrayList<BusRoutes> busRoutes = new ArrayList<>();
-    private Object[][] correspondingAreas = new Object[10][2];
+    private ArrayList<ArrayList<Object>> correspondingAreas = new ArrayList<>();
     private String username;
     private String password;
-    private ArrayList<String> ratings = new ArrayList<>();
 
 
     public Userinfo(String username, String password){
@@ -25,16 +56,16 @@ public class Userinfo {
 
     public void populateLists(){
         //Populate Food Spots
-        foodSpots.add(new Cuisine("In N Out", 1.4));
-        foodSpots.add(new Cuisine("Canes", 1.8));
-        foodSpots.add(new Cuisine("Cafe 86", 3.1));
-        foodSpots.add(new Cuisine("Lucky Star Cafe", 1.6));
-        foodSpots.add(new Cuisine("Gen Korean BBQ", 8.1));
-        foodSpots.add(new Cuisine("Pho Crystal", 2.6));
-        foodSpots.add(new Cuisine("Aduke Nigerian Cuisine", 13.8));
-        foodSpots.add(new Cuisine("J Sushi", 2.4));
-        foodSpots.add(new Cuisine("Olive Garden", 8.9));
-        foodSpots.add(new Cuisine("King Taco", 8.9));
+        foodSpots.add(new Cuisine("In N Out", 1.4, "American"));
+        foodSpots.add(new Cuisine("Canes", 1.8, "American"));
+        foodSpots.add(new Cuisine("Cafe 86", 3.1, "Filipino"));
+        foodSpots.add(new Cuisine("Lucky Star Cafe", 1.6, "Mexican"));
+        foodSpots.add(new Cuisine("Gen Korean BBQ", 8.1, "Korean"));
+        foodSpots.add(new Cuisine("Pho Crystal", 2.6, "Vietnamese"));
+        foodSpots.add(new Cuisine("Aduke Nigerian Cuisine", 13.8, "Nigerian"));
+        foodSpots.add(new Cuisine("J Sushi", 2.4, "Japanese"));
+        foodSpots.add(new Cuisine("Olive Garden", 8.9, "Italian"));
+        foodSpots.add(new Cuisine("King Taco", 8.9, "Mexican"));
 
         // Populate Bus Routes
         busRoutes.add(new BusRoutes("Torrance 13 to Artesia", 0.4));
@@ -49,25 +80,42 @@ public class Userinfo {
         busRoutes.add(new BusRoutes("Torrance 6 to Artesia and LA 60 to Downtown LA", 0.6));
 
         // Populate correspondingAreas array
+    }
+
+    public void populateCorresponding() {
         for (int i = 0; i < foodSpots.size(); i++) {
-            correspondingAreas[i][0] = foodSpots.get(i);
-            correspondingAreas[i][1] = busRoutes.get(i);
+            ArrayList<Object> pair = new ArrayList<>();
+            pair.add(foodSpots.get(i));
+            pair.add(busRoutes.get(i));
+            correspondingAreas.add(pair);
         }
     }
     
-    public void addFoodSpot(FoodSpots spot) {
-        foodSpots.add(spot);
-    }
-
+   
     public ArrayList<FoodSpots> getFoodSpots() {
         return foodSpots;
     }
 
-    public void addRating(String rating) {
-        ratings.add(rating);
-   }
-
-    public ArrayList<String> getRatings() {
-        return ratings;
+    public ArrayList<ArrayList<Object>> getCorrespondingAreas() {
+        return correspondingAreas;
     }
+
+    @Override
+    public String toString() {
+        String result = String.format("%-5s | %-30s | %-50s\n", "No.", "Food Spots", "Bus Routes");
+        result += String.format("%-5s-+-%-30s-+-%-50s\n", "-----", "------------------------------", "--------------------------------------------------");
+        
+        int count = 1;
+        for (ArrayList<Object> pair : correspondingAreas) {
+            FoodSpots foodSpot = (FoodSpots) pair.get(0);
+            BusRoutes busRoute = (BusRoutes) pair.get(1);
+            result += String.format("%-5d | %-30s | %-50s\n", 
+                count++,
+                foodSpot.getRestaurant(), 
+                busRoute.getBusName());
+        }
+        
+        return result;
+    }
+
 }
